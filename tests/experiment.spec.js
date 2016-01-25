@@ -9,11 +9,10 @@ chai.should();
 describe("Experiment:", () => {
     let experiment;
 
-    beforeEach(() => {
-        experiment = new Experiment();
-    });
-
     describe("#ctor", () => {
+        beforeEach(() => {
+            experiment = new Experiment();
+        });
 
         it("should create instance.", ()=> {
             (!!experiment).should.be.equal(true);
@@ -45,5 +44,29 @@ describe("Experiment:", () => {
                 err.should.be.instanceOf(Error);
             }
         })
+    });
+
+    describe("#run", ()=> {
+
+        beforeEach(() => {
+            experiment = new Experiment();
+            experiment.percentageEnabled = 100;
+        });
+
+        it('should throw  en BehaviourMissingError when no control specified', ()=> {
+            try {
+                experiment.run();
+            } catch (err) {
+                err.should.be.instanceOf(Error);
+                err.message.should.be.equal("Experiment missing Control behaviour");
+            }
+        });
+
+        it('should returns control when has control', ()=> {
+            experiment.use(()=>"control");
+
+            let actual = experiment.run();
+            actual.should.be.equal("control");
+        });
     })
 });
