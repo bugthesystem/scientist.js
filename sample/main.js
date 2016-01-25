@@ -1,9 +1,11 @@
 import "babel-polyfill";
 
-import {Result} from '../index';
+import User from './user';
+import MyWidget from './my-widget';
 
 function main() {
-
+    let myWidget = new MyWidget();
+    myWidget.allows(new User("test-user"))
 }
 
 main();
