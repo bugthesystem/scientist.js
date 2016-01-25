@@ -1,3 +1,4 @@
+### Node template
 # Logs
 logs
 *.log
@@ -24,10 +25,14 @@ coverage
 build/Release
 
 # Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
 
-# Optional npm cache directory
-.npm
+# Created by .ignore support plugin (hsz.mobi)
 
 # Optional REPL history
 .node_repl_history
+
+.idea/
+coverage/
+
