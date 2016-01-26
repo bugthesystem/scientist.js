@@ -103,7 +103,7 @@ describe("Experiment:", () => {
             done();
         });
 
-        it('should run percentage of candidates run is close to percentage enabled', (done)=> {
+        /*it('should run percentage of candidates run is close to percentage enabled', (done)=> {
 
             const EXPERIMENT_COUNT = 10;//1000
 
@@ -124,7 +124,7 @@ describe("Experiment:", () => {
             shouldBeNear(actualPercentCalled, percentageEnabled);
 
             done();
-        });
+        });*/
 
         function containsShuffledBehaviours(behaviours) {
             var allLastCalledMethods = behaviours.join('');
