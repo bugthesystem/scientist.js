@@ -8,13 +8,14 @@ How do I science?
 
 Let's pretend you're changing the way you handle permissions in a large web app. Tests can help guide your refactoring, but you really want to capture the current and refactored beahviours under load.
 
+**ES6 Sample**
 ```js
 import {Experiment, Result} from 'scientist.js';
 
 import Permission from './permission';
 import Model from './model';
 
-export default class MyWidget {
+class MyWidget {
     constructor() {
         this.model = new Model();
     }
