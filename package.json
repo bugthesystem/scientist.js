@@ -1,6 +1,6 @@
 {
   "name": "scientist.js",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A JavaScript interpretation of the Ruby library Scientist, a library for carefully refactoring critical paths.",
   "main": "lib/index.js",
   "scripts": {
