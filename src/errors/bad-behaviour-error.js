@@ -1,27 +1,11 @@
 export default class BadBehaviourError extends Error {
 
-    constructor(experimentIn, nameIn, message) {
-        super(message);
+    constructor(experimentIn, name, message) {
+        super(message || "An error occurred");
 
-        this._experiment = experimentIn;
-        this._name = nameIn;
+        this.message = message || "An error occurred";
+        this.experiment = experimentIn || null;
+        this.name = name || "";
 
-    }
-
-    get experiment() {
-        return this._experiment;
-    }
-
-    set experiment(value) {
-        this._experiment = value;
-    }
-
-
-    get name() {
-        return this._name;
-    }
-
-    set name(value) {
-        this._name = value;
     }
 }
