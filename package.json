@@ -6,9 +6,9 @@
   "scripts": {
     "compile": "babel src --out-dir lib",
     "prepublish": "npm run compile",
-    "test": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/mocha/bin/_mocha --timeout 15000 tests/**/*.spec.js",
-    "test-cov": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/isparta/bin/isparta cover --report lcov --report text --report html ./node_modules/mocha/bin/_mocha  -- --timeout 15000 --reporter dot tests/**/*.spec.js",
-    "test-travis": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/isparta/bin/isparta cover --report lcov ./node_modules/mocha/bin/_mocha  -- --timeout 15000 --reporter dot tests/**/*.spec.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "test": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/mocha/bin/_mocha --timeout 20000 tests/**/*.spec.js",
+    "test-cov": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/isparta/bin/isparta cover --report lcov --report text --report html ./node_modules/mocha/bin/_mocha  -- --timeout 20000 --reporter dot tests/**/*.spec.js",
+    "test-travis": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/isparta/bin/isparta cover --report lcov ./node_modules/mocha/bin/_mocha  -- --timeout 20000 --reporter dot tests/**/*.spec.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "babel": {
     "presets": [
@@ -35,6 +35,7 @@
     "gulp": "^3.9.0",
     "isparta": "^4.0.0",
     "mocha": "^2.3.4",
-    "sinon": "^1.17.2"
+    "sinon": "^1.17.2",
+    "validator": "^4.5.1"
   }
 }
