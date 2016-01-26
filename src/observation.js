@@ -7,6 +7,7 @@ export default class Observation {
         var now = this._dateTimeProvider.now();
         try {
             this._result = block();
+            this._error = null;
         }
         catch (err) {
             this._error = err;
@@ -30,8 +31,9 @@ export default class Observation {
 
         var exceptionsAreEquivalent = (bothRaisedExceptions &&
         typeof other.error === typeof this._error &&
-        other.error.message === this.error.message);
+        other.error.message === this._error.message);
 
+        //console.log(`(${neitherRaisedExceptions} && ${valuesAreEqual}) || (${bothRaisedExceptions} && ${exceptionsAreEquivalent})`);
         return (neitherRaisedExceptions && valuesAreEqual) || (bothRaisedExceptions && exceptionsAreEquivalent);
     }
 

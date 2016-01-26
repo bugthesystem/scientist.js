@@ -80,7 +80,6 @@ describe("Experiment:", () => {
         // This test ensures that tests do not always run "control" then "candidate"
         // This is a hideous test...
         it('should shuffles behaviors before running', (done)=> {
-
             var lastCalled = null;
             const EXPERIMENT_COUNT = 10;//2500
 
