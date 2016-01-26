@@ -13,7 +13,7 @@ export default class Observation {
         }
 
         this._duration = (this._dateTimeProvider.now() - now) / 1000; //total seconds
-        console.log(`[Observation] duration ${this._duration}`);
+        //console.log(`[Observation] duration ${this._duration}`);
     }
 
 

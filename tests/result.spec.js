@@ -2,7 +2,7 @@ import "babel-polyfill";
 
 import chai from "chai";
 
-import {Result} from "../index";
+import {Result} from "../src/index";
 
 
 chai.should();

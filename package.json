@@ -2,11 +2,18 @@
   "name": "scientist.js",
   "version": "1.0.0",
   "description": "A JavaScript interpretation of the Ruby library Scientist, a library for carefully refactoring critical paths.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/mocha/bin/_mocha tests/**/*.spec.js",
+    "compile": "babel src --out-dir lib",
+    "prepublish": "npm run compile",
+    "test": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/mocha/bin/_mocha --timeout 15000 tests/**/*.spec.js",
     "test-cov": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/isparta/bin/isparta cover --report lcov --report text --report html ./node_modules/mocha/bin/_mocha  -- --reporter dot tests/**/*.spec.js",
     "test-travis": "node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/isparta/bin/isparta cover --report lcov ./node_modules/mocha/bin/_mocha  -- --reporter dot tests/**/*.spec.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "keywords": [
     "scientist",
@@ -20,6 +27,9 @@
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.4.5",
+    "babel-plugin-transform-async-functions": "^6.3.13",
+    "babel-plugin-transform-regenerator": "^6.4.4",
+    "babel-polyfill": "^6.3.14",
     "babel-preset-es2015": "^6.3.13",
     "chai": "^3.4.1",
     "gulp": "^3.9.0",

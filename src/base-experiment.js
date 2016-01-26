@@ -47,7 +47,7 @@ export default class BaseExperiment {
 
 
     run() {
-        console.log('[BASE EXPERIMENT] run');
+        //console.log('[BASE EXPERIMENT] run');
 
         if (this.Control === null) {
             throw new BehaviourMissingError(this, "Control");

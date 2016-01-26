@@ -35,4 +35,4 @@ node_modules
 
 .idea/
 coverage/
-
+lib/
