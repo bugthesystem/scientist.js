@@ -1,5 +1,5 @@
 # scientist.js
-:microscope: A JavaScript interpretation of the Ruby library Scientist, a library for carefully refactoring critical paths.
+:microscope: A JavaScript interpretation of the Ruby library [Scientist](https://github.com/github/scientist), a library for carefully refactoring critical paths.
 
 [![Build Status](https://travis-ci.org/ziyasal/scientist.js.svg?branch=master)](https://travis-ci.org/ziyasal/scientist.js) [![Coverage Status](https://coveralls.io/repos/github/ziyasal/scientist.js/badge.svg?branch=master)](https://coveralls.io/github/ziyasal/scientist.js?branch=master)
 
