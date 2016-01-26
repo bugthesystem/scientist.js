@@ -1,6 +1,6 @@
 export default class Result {
     constructor(experimentIn) {
-        this._experimentIn = experimentIn;
+        this._experimentIn = experimentIn || null;
         this._observations = [];
     }
 
