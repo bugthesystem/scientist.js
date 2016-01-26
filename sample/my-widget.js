@@ -1,4 +1,4 @@
-import {Experiment, Result} from '../index';
+import {Experiment, Result} from '../src/index';
 import Permission from './permission';
 import Model from './model';
 
