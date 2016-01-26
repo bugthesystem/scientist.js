@@ -28,7 +28,7 @@ export default class MyWidget {
     }
 }
 ```
-Use `use(..)` to wrap the existing original behaviour, and use `try(..)` to wrap the new behaviour. `experiment.run();` will always return the result of the Use block, but it does a bunch of stuff behind the scenes:
+Use `use(..)` to wrap the existing original behaviour, and use `try(..)` to wrap the new behaviour. `experiment.run();` will always return the result of the `use` block, but it does a bunch of stuff behind the scenes:
 
 - It decides whether or not to run the `try` block
 - Randomises order to execute `try` and `use` blocks
