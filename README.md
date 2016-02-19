@@ -6,7 +6,7 @@
 How do I science?
 ========================
 
-Let's pretend you're changing the way you handle permissions in a large web app. Tests can help guide your refactoring, but you really want to capture the current and refactored beahviours under load.
+Let's pretend you're changing the way you handle permissions in a large web app. Tests can help guide your refactoring, but you really want to capture the current and refactored behaviours under load.
 
 **ES6 Sample**
 ```js
