@@ -27,6 +27,14 @@ describe("Result:", () => {
         it("should create experimentIn as null", ()=> {
             (result.experimentIn === null).should.be.equal(true);
         });
+
+        it("should set experimentIn externally.", ()=>{
+            let mockExperimentIn = 'mockExperimentIn';
+
+            (result.experimentIn === null).should.be.equal(true);
+            result.experimentIn = mockExperimentIn;
+            result.experimentIn.should.be.equal(mockExperimentIn);
+        })
     });
 
     describe("#observations", () => {
