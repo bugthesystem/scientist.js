@@ -36,6 +36,34 @@ describe("Experiment:", () => {
             experiment.publishers.length.should.be.equal(0);
         });
 
+        it("should set publishers list externally.", ()=> {
+            let mockPublishers = [{}];
+            //make sure publishers is empty
+            experiment.publishers.length.should.be.equal(0);
+
+            experiment.publishers = mockPublishers;
+            experiment.publishers.length.should.be.equal(mockPublishers.length);
+        });
+
+        it("should set name externally.", ()=> {
+            let mockName = "mockName";
+            //make sure that name is set to default value
+            experiment.name.should.be.equal("Experiment");
+
+            experiment.name = mockName;
+            experiment.name.should.be.equal(mockName);
+
+        });
+
+        it("should set runIf to false.", ()=> {
+
+            //make sure that runIf set to default value
+            experiment._runIf.should.be.equal(true);
+
+            experiment.runIf(false);
+            experiment._runIf.should.be.equal(false);
+
+        })
 
     });
 
