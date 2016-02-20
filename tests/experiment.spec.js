@@ -31,6 +31,12 @@ describe("Experiment:", () => {
         it("should set percentageEnabled to zero", ()=> {
             experiment.percentageEnabled.should.be.equal(0);
         });
+
+        it("should set publishers list empty", ()=> {
+            experiment.publishers.length.should.be.equal(0);
+        });
+
+
     });
 
     describe("#use", ()=> {
@@ -105,26 +111,26 @@ describe("Experiment:", () => {
 
         /*it('should run percentage of candidates run is close to percentage enabled', (done)=> {
 
-            const EXPERIMENT_COUNT = 10;//1000
+         const EXPERIMENT_COUNT = 10;//1000
 
-            var numberOfTimesTryCalled = 0;
-            var percentageEnabled = 70;
+         var numberOfTimesTryCalled = 0;
+         var percentageEnabled = 70;
 
-            experiment.percentageEnabled = percentageEnabled;
+         experiment.percentageEnabled = percentageEnabled;
 
-            experiment.try(() => numberOfTimesTryCalled++);
-            experiment.use(() => 1000);
+         experiment.try(() => numberOfTimesTryCalled++);
+         experiment.use(() => 1000);
 
-            for (var i = 0; i < EXPERIMENT_COUNT; i++) {
-                sleep(1);
-                experiment.run();
-            }
+         for (var i = 0; i < EXPERIMENT_COUNT; i++) {
+         sleep(1);
+         experiment.run();
+         }
 
-            let actualPercentCalled = (numberOfTimesTryCalled / EXPERIMENT_COUNT * 100);
-            shouldBeNear(actualPercentCalled, percentageEnabled);
+         let actualPercentCalled = (numberOfTimesTryCalled / EXPERIMENT_COUNT * 100);
+         shouldBeNear(actualPercentCalled, percentageEnabled);
 
-            done();
-        });*/
+         done();
+         });*/
 
         function containsShuffledBehaviours(behaviours) {
             var allLastCalledMethods = behaviours.join('');
@@ -146,7 +152,7 @@ describe("Experiment:", () => {
         }
 
         //https://github.com/erikdubbelboer/node-sleep/blob/master/index.js#L8
-        //sleep: busy loop fallback
+        //sleep: busy loop fallck
         function sleep(s) {
             var e = new Date().getTime() + (s * 1000);
 

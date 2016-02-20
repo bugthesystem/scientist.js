@@ -32,6 +32,30 @@ describe("Observation:", () => {
 
             (!!observation).should.be.equal(true);
         });
+
+        it('should set experiment name and experimentIn ', ()=> {
+            let mockExperimentIn = 'testExperiment',
+                mockBehaviourName = 'testBehaviourName';
+
+            dateTimeProviderMock.expects("now").atLeast(2);
+            observation = new Observation(mockExperimentIn, mockBehaviourName, ()=> 'test', dateTimeProvider);
+
+            observation.experiment.should.be.equal(mockExperimentIn);
+            observation.name.should.be.equal(mockBehaviourName);
+
+        });
+
+        it('should set duration to zero', ()=> {
+
+            let dateNow = new Date();
+
+            dateTimeProviderMock.expects("now").returns(dateNow);
+            dateTimeProviderMock.expects("now").returns(dateNow.setHours(dateNow.getHours() + 1));
+
+            observation = new Observation(null, null, ()=> 'test', dateTimeProvider);
+
+            observation.duration.should.be.equal(0);
+        });
     });
 
     describe("#isEquivalentTo", () => {
