@@ -3,6 +3,11 @@
 
 [![Build Status](https://travis-ci.org/ziyasal/scientist.js.svg?branch=master)](https://travis-ci.org/ziyasal/scientist.js) [![Coverage Status](https://coveralls.io/repos/github/ziyasal/scientist.js/badge.svg?branch=master)](https://coveralls.io/github/ziyasal/scientist.js?branch=master)
 
+**Install**
+```sh
+npm install scientist.js
+```
+
 How do I science?
 ========================
 
