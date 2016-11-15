@@ -21,7 +21,6 @@ export default class Experiment extends BaseExperiment {
     }
 
     run() {
-        //console.log('[EXPERIMENT] run');
         return super.run();
     }
 }
