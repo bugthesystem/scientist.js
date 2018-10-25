@@ -1,7 +1,6 @@
 import "babel-polyfill";
 
 import chai from "chai";
-import validator from "validator";
 
 import DateTimeProvider from "../src/datetime-provider";
 
@@ -26,7 +25,7 @@ describe("DateTimeProvider:", () => {
 
         it("should return valid date", ()=> {
             let now = dateTimeProvider.now();
-            validator.isDate(now).should.be.equal(true);
+            now.should.be.a("date");
         });
     });
 });
