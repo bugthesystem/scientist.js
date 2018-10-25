@@ -25,7 +25,7 @@ describe("DateTimeProvider:", () => {
 
         it("should return valid date", ()=> {
             let now = dateTimeProvider.now();
-            now.should.be.a('date')
+            now.should.be.a("date");
         });
     });
 });
